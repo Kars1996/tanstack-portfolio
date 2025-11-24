@@ -4,6 +4,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import appCss from '../styles.css?url'
 import { Nav } from '@/components/nav'
+import { AnimationProvider } from '@/components/body'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -40,7 +41,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <body className="selection:bg-accent selection:text-white">
+      <AnimationProvider className="selection:bg-accent selection:text-white">
         <div className="grain" />
         <Nav />
         {children}
@@ -56,7 +57,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           ]}
         />
         <Scripts />
-      </body>
+      </AnimationProvider>
     </html>
   )
 }
