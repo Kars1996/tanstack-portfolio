@@ -23,7 +23,7 @@ export function Process() {
   ]
 
   return (
-    <section className="py-24 md:py-40 px-6 md:px-20 bg-zinc-900/50 border-y border-white/5">
+    <section className="py-24 md:py-40 px-6 md:px-20 bg-zinc-950/50 border-y border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-16">
           <div className="md:col-span-1">
