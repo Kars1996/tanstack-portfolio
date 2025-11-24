@@ -20,7 +20,7 @@ export function Nav() {
     <nav className="fixed top-0 w-full z-50 p-6 flex justify-between items-center mix-blend-difference text-white">
       <Link
         to="/"
-        className="text-2xl font-display font-bold tracking-tighter hover:opacity-80 transition-opacity"
+        className="text-2xl uppercase font-display font-bold tracking-tighter hover:opacity-80 transition-opacity"
         data-cursor-text="HOME"
       >
         Alex.art
