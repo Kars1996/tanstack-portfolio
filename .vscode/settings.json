@@ -12,4 +12,5 @@
       "source.addMissingImports",
       "source.fixAll.eslint"
   ],
+"typescript.referencesCodeLens.enabled": true   
 }

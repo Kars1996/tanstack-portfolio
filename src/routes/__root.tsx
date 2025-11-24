@@ -5,6 +5,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 import appCss from '../styles.css?url'
 import { Nav } from '@/components/nav'
 import { AnimationProvider } from '@/components/body'
+import { Preloader } from '@/components/preloader'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -42,6 +43,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         />
       </head>
       <AnimationProvider className="selection:bg-accent selection:text-white">
+        <Preloader />
+
         <div className="grain" />
         <Nav />
         {children}
