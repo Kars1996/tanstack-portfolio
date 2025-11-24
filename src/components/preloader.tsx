@@ -4,6 +4,7 @@ import gsap from 'gsap'
 export function Preloader() {
   const [count, setCount] = React.useState(0)
   const [isComplete, setIsComplete] = React.useState(false)
+  const [shouldRender, setShouldRender] = React.useState(true)
 
   const preloaderRef = React.useRef<HTMLDivElement>(null)
   const loadingBarRef = React.useRef<HTMLDivElement>(null)
@@ -21,8 +22,9 @@ export function Preloader() {
         progress < 0.5
           ? 2 * progress * progress
           : 1 - Math.pow(-2 * progress + 2, 2) / 2
-
+          
       const newCount = Math.floor(eased * 100)
+
       setCount(newCount)
 
       if (loadingBarRef.current) {
@@ -38,7 +40,7 @@ export function Preloader() {
       } else {
         setTimeout(() => {
           setIsComplete(true)
-        }, duration + 1200)
+        }, 500)
       }
     }
 
@@ -47,7 +49,11 @@ export function Preloader() {
 
   React.useEffect(() => {
     if (isComplete && preloaderRef.current) {
-      const tl = gsap.timeline()
+      const tl = gsap.timeline({
+        onComplete: () => {
+          setShouldRender(false)
+        }
+      })
 
       tl.to(preloaderRef.current, {
         clipPath: 'inset(0 0 100% 0)',
@@ -65,7 +71,7 @@ export function Preloader() {
     }
   }, [isComplete])
 
-  if (isComplete && count >= 100) {
+  if (!shouldRender) {
     return null
   }
 
@@ -80,11 +86,9 @@ export function Preloader() {
       >
         {count}
       </div>
-
       <div className="text-xs font-mono text-zinc-500 mt-6 uppercase tracking-widest">
         Loading...
       </div>
-
       <div className="w-64 h-0.5 bg-zinc-800 mt-6 relative overflow-hidden rounded-full">
         <div
           ref={loadingBarRef}
