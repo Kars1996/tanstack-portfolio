@@ -10,7 +10,7 @@ export function Hero() {
               CREATIVE
           </div>
           <div className="overflow-hidden">
-            <span className="translate-y-full text-transparent bg-clip-text bg-linear-to-r from-white to-gray-600">
+            <span className="translate-y-full text-transparent bg-clip-text bg-linear-to-r from-white to-zinc-600">
               DEVELOPER
             </span>
           </div>
@@ -18,12 +18,12 @@ export function Hero() {
               & ARTIST
           </div>
         </h1>
-        <p className="max-w-xl text-gray-400 text-lg md:text-xl leading-relaxed translate-y-[100px]">
+        <p className="max-w-xl text-zinc-400 text-lg md:text-xl leading-relaxed translate-y-[100px]">
           Bridging the gap between engineering and aesthetics. Crafting digital
           experiences that are efficient, beautiful, and memorable.
         </p>
       </div>
-      <div className="absolute bottom-10 right-10 md:right-20 flex gap-4 text-xs font-mono text-gray-500 animate-bounce">
+      <div className="absolute bottom-10 right-10 md:right-20 flex gap-4 text-xs font-mono text-zinc-500 animate-bounce">
         <span>SCROLL TO EXPLORE ↓</span>
       </div>
     </header>
