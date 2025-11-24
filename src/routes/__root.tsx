@@ -36,7 +36,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="selection:bg-accent selection:text-white">
+        <div className="grain" />
         {children}
         <TanStackDevtools
           config={{
