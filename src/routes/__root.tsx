@@ -4,6 +4,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 
 
 import appCss from '../styles.css?url'
+import { Nav } from '@/components/nav'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -38,6 +39,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="selection:bg-accent selection:text-white">
         <div className="grain" />
+        <Nav />
         {children}
         <TanStackDevtools
           config={{

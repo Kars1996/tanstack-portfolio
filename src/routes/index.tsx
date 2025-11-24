@@ -1,5 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from '@/components/hero'
+import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute("/")({
-  component: () => <h1>Coming soon :3</h1>,
-});
+export const Route = createFileRoute('/')({
+  component: App,
+})
+
+function App() {
+  return (
+    <>
+      <Hero />
+    </>
+  )
+}
