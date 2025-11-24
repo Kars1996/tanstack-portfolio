@@ -43,8 +43,8 @@ export function Process() {
                   key={indx}
                 >
                   <span className="text-5xl font-display font-bold text-white/10 group-hover:text-zinc-200 transition-colors mb-4 block">
-                    0{indx}
-                    {/* there should never really be more than 10 steps so this is fine */}
+                    0{indx + 1}
+                    {/* there should never really be more than 9 steps so this is fine */}
                   </span>
                   <h3 className="text-xl font-bold mb-2">{step.title}</h3>
                   <p className="text-sm text-zinc-400">{step.description}</p>
