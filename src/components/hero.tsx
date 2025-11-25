@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <header className="h-screen flex flex-col justify-center px-6 md:px-20 relative overflow-hidden">
       <div className="max-w-7xl w-full mx-auto relative z-10">
-        <p className="text-orange-500 font-mono mb-6 reveal-text translate-y-[100px] opacity-0">
+        <p className="text-orange-500 font-mono mb-6">
           Based in San Francisco
         </p>
         <h1 className="text-6xl md:text-9xl font-display font-bold leading-[0.9] tracking-tighter mb-8">
