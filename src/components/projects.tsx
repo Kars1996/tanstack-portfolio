@@ -54,7 +54,7 @@ export function Projects() {
               </div>
               <div className="flex justify-between items-start mt-6">
                 <div>
-                  <h3 className="text-3xl font-display font-bold mb-2 group-hover:text-accent transition-colors">
+                  <h3 className="text-3xl font-display font-bold mb-2 group-hover:text-orange-500 transition-colors">
                     {work.title}
                   </h3>
                   <div className="flex gap-2 text-xs font-mono uppercase text-zinc-400">

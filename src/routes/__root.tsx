@@ -42,7 +42,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <AnimationProvider className="selection:bg-accent selection:text-white">
+      <AnimationProvider className="selection:bg-orange-500 selection:text-white">
         <Preloader />
 
         <div className="grain" />
